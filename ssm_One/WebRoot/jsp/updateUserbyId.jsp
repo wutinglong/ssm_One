@@ -24,28 +24,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <br>
     <center>
-    	<h1>用户信息</h1><hr>
-    		<table border="1" width="70%">
-    			<tr>
-    				<td align="center"><b>编号</b></td>
-    				<td align="center"><b>姓名</b></td>
-    				<td align="center"><b>年龄</b></td>
-    				<td align="center"><b>操作</b></td>
-    			</tr>
-    			<c:forEach items="${userList}" var="user">
-    			<tr>
-    				<td align="center">${user.userId}</td>
-    				<td align="center">${user.userName}</td>
-    				<td align="center">${user.userAge}</td>
-    				<td align="center"><a href="user/queryUserbyId.html?userId=${user.userId}">查看</a>&nbsp;&nbsp;<a href="user/updateueryUserbyId.html?userId=${user.userId}">修改</a>&nbsp;&nbsp;<a id="deleteUser" href="user/deleteUserbyId.html?userId=${user.userId}">删除</a></td>
-    			</tr>
-    			</c:forEach>
-    		</table>
+    	<h1>修改用户信息</h1><hr>
+    		<form id="myfrom" method="post" name="myfrom">
+    			编号：&nbsp;&nbsp;<input type="text" name="userId" id="userId" readonly="readonly" value="${user.userId }"/><br/><br/>
+    			姓名：&nbsp;&nbsp;<input type="text" name="userName" id="userName" value="${user.userName }"/><br/><br/>
+    			年龄：&nbsp;&nbsp;<input type="text" name="userAge" id="userAge" value="${user.userAge }"/><br/><br/>
+    			<input type="reset" value="重置"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="修改" id="update"/>
+    		</form>
     </center>
-    <script type="text/javascript">
-    	$("#deleteUser").click(function(){
-    		alert("删除成功");
-    	});
-    </script>
+  <script type="text/javascript">
+  	//修改用户信息
+  	$("#update").click(function(){
+  		$.ajax({
+  			url:"user/updateUserbyId.html",
+  			type:"post",
+  			data:$("#myfrom").serialize(),
+  			success:function(data)
+  			{
+  				alert("修改成功");
+  				location.href="../user/index.html";
+  			}
+  		});
+  	});
+  </script>
   </body>
 </html>

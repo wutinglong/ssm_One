@@ -16,4 +16,12 @@
 		<select id="queryUserbyId" resultType="userinfo">
 			select * from userInfo where userId=#{userId}
 		</select>
+		<!-- 修改用户信息 -->
+		<update id="updateUserbyId">
+			update userInfo set userAge=${user.userAge},userName=#{user.userName} where userId=#{user.userId}
+		</update>
+		<!-- 删除用户信息 -->
+		<delete id="deleteUserbyId">
+			delete from userInfo where userId=#{userId}
+		</delete>
 </mapper>

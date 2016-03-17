@@ -34,8 +34,8 @@ public class userControl {
 		return "index";
 	}
 	
-	@RequestMapping("queryUserbyId.html")
 	//查看用户详细信息
+	@RequestMapping("/queryUserbyId.html")
 	public String queryUserbyId(HttpServletRequest request,String userId)
 	{
 		//得到用户详细信息
@@ -43,5 +43,38 @@ public class userControl {
 		//保存用户信息
 		request.setAttribute("user", user);
 		return "userinfoTrol";
+	}
+	
+	//查看修改用户详细信息
+	@RequestMapping("/updateueryUserbyId.html")
+	public String updateueryUserbyId(HttpServletRequest request,String userId)
+	{
+		//得到用户详细信息
+		userinfo user=userDao.queryUserbyId(userId);
+		//保存用户信息
+		request.setAttribute("user", user);
+		return "updateUserbyId";
+	}
+	
+	//修改用户信息
+	@RequestMapping("/updateUserbyId.html")
+	public String updateUserbyId(userinfo user)
+	{
+		//修改用户信息
+		userDao.updateUserbyId(user);
+		return "index";
+	}
+	
+	//删除用户信息
+	@RequestMapping("/deleteUserbyId.html")
+	public String deleteUserbyId(String userId,HttpServletRequest request)
+	{
+		//删除用户信息
+		userDao.deleteUserbyId(userId);
+		//得到所有用户信息
+		List<userinfo> userList=userDao.queryUser();
+		//保存数据
+		request.setAttribute("userList", userList);
+		return "index";
 	}
 }
