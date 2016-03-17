@@ -1,5 +1,6 @@
 package com.control;
 
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -76,5 +77,12 @@ public class userControl {
 		//保存数据
 		request.setAttribute("userList", userList);
 		return "index";
+	}
+	
+	//访问test.jsp页面
+	@RequestMapping("/test.html")
+	public String getTets()
+	{
+		return "test";
 	}
 }
