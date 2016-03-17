@@ -33,4 +33,15 @@ public class userControl {
 		request.setAttribute("userList", userList);
 		return "index";
 	}
+	
+	@RequestMapping("queryUserbyId.html")
+	//查看用户详细信息
+	public String queryUserbyId(HttpServletRequest request,String userId)
+	{
+		//得到用户详细信息
+		userinfo user=userDao.queryUserbyId(userId);
+		//保存用户信息
+		request.setAttribute("user", user);
+		return "userinfoTrol";
+	}
 }

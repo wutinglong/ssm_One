@@ -8,7 +8,12 @@
 			<result column="userName" property="userName"/>
 			<result column="userAge" property="userAge"/>
 		</resultMap>
+		<!-- 查看用户信息 -->
 		<select id="queryUser" resultMap="userList">
 			select * from userInfo
+		</select>
+		<!-- 查看用户详细信息 -->
+		<select id="queryUserbyId" resultType="userinfo">
+			select * from userInfo where userId=#{userId}
 		</select>
 </mapper>

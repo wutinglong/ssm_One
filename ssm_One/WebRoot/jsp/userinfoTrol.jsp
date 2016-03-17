@@ -23,22 +23,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <br>
     <center>
-    	<h1>用户信息</h1><hr>
-    		<table border="1" width="70%">
+    	<h1>用户详细信息</h1><hr>
+    		<table width="20%">
     			<tr>
     				<td align="center"><b>编号</b></td>
-    				<td align="center"><b>姓名</b></td>
-    				<td align="center"><b>年龄</b></td>
-    				<td align="center"><b>操作</b></td>
-    			</tr>
-    			<c:forEach items="${userList}" var="user">
-    			<tr>
     				<td align="center">${user.userId}</td>
-    				<td align="center">${user.userName}</td>
-    				<td align="center">${user.userAge}</td>
-    				<td align="center"><a href="user/queryUserbyId.html?userId=${user.userId}">查看用户</a></td>
     			</tr>
-    			</c:forEach>
+    			<tr></tr>
+    			<tr></tr>
+    			<tr>
+    				<td align="center"><b>姓名</b></td>
+    				<td align="center">${user.userName}</td>
+    			</tr>
+    			<tr></tr>
+    			<tr></tr>
+    			<tr>
+    				<td align="center"><b>年龄</b></td>
+    				<td align="center">${user.userAge}</td>
+    			</tr>
     		</table>
     </center>
   </body>
