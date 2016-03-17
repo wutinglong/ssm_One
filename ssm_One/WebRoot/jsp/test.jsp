@@ -26,35 +26,34 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>  
 <body>
 <center>
-<!-- Content -->  
-<div class="container">  
-  
-<h2 class="page-header">演示</h2>  
-  
-<div class="docs-methods">  
-<form class="form-inline">  
-<div id="distpicker">  
-<div class="form-group">  
-<div style="position: relative;">  
-<input id="city-picker3" class="form-control" readonly type="text" value="江苏省/常州市/溧阳市" data-toggle="city-picker">  
-</div>  
-</div>  
-<div class="form-group">  
-<button class="btn btn-warning" id="reset" type="button">重置</button>  
-<button class="btn btn-danger" id="destroy" type="button">确定</button>  
-</div>  
-</div>  
-</form>  
-</div>  
-  
-</div><br/>
-<div class="container"><a href="http://hovertree.com">首页</a> <a href="http://hovertree.com/texiao/">特效</a> <a href="http://hovertree.com/h/bjaf/5gbv36dt.htm">原文</a> <a href="http://hovertree.com/texiao/jquery/22/">效果2</a> </div> 
-</center> 
-<script src="http://hovertree.com/ziyuan/jquery/jquery-1.12.1.min.js"></script>  
-<script src="http://hovertree.com/ziyuan/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
-<script src="http://hovertree.com/texiao/bootstrap/4/js/city-picker.data.js"></script>  
-<script src="http://hovertree.com/texiao/bootstrap/4/js/city-picker.js"></script>  
-<script src="http://hovertree.com/texiao/bootstrap/4/js/main.js"></script>  
+	<!-- Content -->  
+	<div class="container">
+		<h2 class="page-header">演示</h2>  
+		<div class="docs-methods">  
+			<form class="form-inline">  
+				<div id="distpicker">  
+				<div class="form-group">  
+				<div style="position: relative;">  
+					<input id="city-picker3" class="form-control" readonly type="text" value="江苏省/常州市/溧阳市" data-toggle="city-picker">  
+				</div>  
+				</div>  
+				<div class="form-group">  
+					<button class="btn btn-warning" id="reset" type="button">重置</button>  
+					<button class="btn btn-danger" id="destroy" type="button">确定</button>  
+				</div>  
+				</div>  
+			</form>  
+		</div>  
+	  
+	</div><br/>
+	<div class="container">
+		<a href="http://hovertree.com">首页</a> <a href="http://hovertree.com/texiao/">特效</a> <a href="http://hovertree.com/h/bjaf/5gbv36dt.htm">原文</a> <a href="http://hovertree.com/texiao/jquery/22/">效果2</a> </div> 
+	</center> 
+	<script src="http://hovertree.com/ziyuan/jquery/jquery-1.12.1.min.js"></script>  
+	<script src="http://hovertree.com/ziyuan/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+	<script src="http://hovertree.com/texiao/bootstrap/4/js/city-picker.data.js"></script>  
+	<script src="http://hovertree.com/texiao/bootstrap/4/js/city-picker.js"></script>  
+	<script src="http://hovertree.com/texiao/bootstrap/4/js/main.js"></script>  
 
 </body>  
 </html>  
